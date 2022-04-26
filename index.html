@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Technical Test</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="content">
+            <!-- Tab Index -->
+            <div class="tab-index">
+                <input
+                    class="tabindex"
+                    type="radio"
+                    name="tabindex"
+                    id="1"
+                    value="Câu 1"
+                /><label for="1">Câu 1</label>
+                <input
+                    type="radio"
+                    name="tabindex"
+                    id="2"
+                    value="Câu 2"
+                    class="tabindex"
+                /><label for="2">Câu 2</label>
+                <input
+                    type="radio"
+                    name="tabindex"
+                    id="3"
+                    value="Câu 3"
+                    class="tabindex"
+                /><label for="3">Câu 3</label>
+                <input
+                    type="radio"
+                    name="tabindex"
+                    id="4"
+                    value="Câu 4"
+                    class="tabindex"
+                /><label for="4">Trả lời SECTION 4</label>
+            </div>
+            <!-- Tab items -->
+            <div class="tabs">
+                <label for="1"> <div class="tab-item active">Câu 1</div></label>
+                <label for="2"> <div class="tab-item active">Câu 2</div></label>
+                <label for="3"> <div class="tab-item active">Câu 3</div></label>
+                <label for="4"> <div class="tab-item active">SECTION 4</div></label>
+            </div>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+                <div class="tab-pane">
+                    <h2>
+                        Khi truy cập 1 trang web (VD: https://geekadventure.vn)
+                        trình duyệt sẽ làm gì?
+                    </h2>
+                    <p>
+                        Trả lời: Web hoạt động theo mô hình client-server, khi
+                        truy cập trình duyệt sẽ gọi tới máy chủ DNS để biên dịch
+                        URL trang web thành một địa chỉ IP, sau đó trình duyệt
+                        sẽ tạo kết nối TCP đến server, server xử lý request sau
+                        đó trả về một response cho client là 1 trang giao diện
+                        HTML mà ta có thể quan sát và tương tác.
+                    </p>
+                </div>
+                <div class="tab-pane">
+                    <h2>
+                        Nếu có 2 CSS Selectors cùng ứng với 1 element thì style
+                        của element sẽ thể hiện như thế nào?
+                    </h2>
+                    <p>
+                        Trả lời: Style của element đó sẽ được thể hiện theo thứ
+                        tự ưu tiên của CSS Selectors từ cao đến thấp đó là
+                        inline -> id -> class -> tag, có thể ưu tiên style bằng
+                        cách thêm !important
+                    </p>
+                </div>
+                <div class="tab-pane active">
+                    <h2>
+                        Callback & Promise trong JavaScript dùng để làm gì ?
+                    </h2>
+                    <p>
+                        Trả lời: <strong>Callback</strong> là một hàm được
+                        truyền vào một hàm khác như một đối số, callback để đảm
+                        bảo cho code không được thực thi cho đến khi code khác
+                        thực hiện xong
+                        <br />
+                        <strong>Promise</strong> dùng để xử lý việc gặp phải
+                        tình trạng callback hell
+                    </p>
+                </div>
+                <div class="tab-pane ">
+                    <h2>
+                        <strong>Câu 1: </strong>Sau khi chạy đoạn code ở mẫu ở section 4 thì students[0].score sẽ mang giá trị gì? Giải thích. <br>
+                        <strong>Câu 2: </strong>Độ phức tạp khi set score làm tác vụ chính là bao nhiêu ? Viết lại code để đảm bảo students không bị thay đổi.
+                    </h2>
+                    <p>
+                        Trả lời: <br> <strong>Câu 1:</strong> Sau khi chạy code giá trị của students[0].score là 6.5 </br>
+                        <strong>Giải thích: </strong> Vì hàm sort theo mẫu sẽ sắp xếp mãng theo chiều tăng dần, sau đó chạy vòng lặp foreach với mỗi phần tử của student thì score của phần tử đó + thêm 0.5 được so sánh số nhỏ nhất với 10. Mãng sau khi sắp xếp thì students[0] là Davis id=2 với score=6 và được cộng thêm 0.5 nữa nên kết quả là 6.5 
+                        <br> <strong>Câu 2: </strong>Độ phức tạp là O(n) <br> Code lại: Phần khai báo students giữ nguyên
+                        <br><img src="./code.png" alt="" >
+                    </p>
+                </div>
+                
+            </div>
+            <h1>SECTION 3</h1>
+            Nhập userId cần xem task đã hoàn thành và chưa hoàn thành:<br/>
+            <input type="text" name="" id="input" />
+            <button onclick="getCompleted()">Xác nhận</button>
+            <div id="output"><div>
+            
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
